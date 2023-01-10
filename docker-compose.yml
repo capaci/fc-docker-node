@@ -34,6 +34,7 @@ services:
     entrypoint: wait-for db:3306 -t 40 -- npm start
     volumes:
       - ./node:/app
+      - /app/node_modules
     networks:
       - app-network
       - db-network
